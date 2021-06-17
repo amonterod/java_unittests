@@ -1,0 +1,15 @@
+{
+    "elements":[
+        {
+            "id":10001,
+            "name":"Leche",
+            "category":"Lacteos",
+            "units":10,
+            "nutritional_info":{
+                "label":"A",
+                "calories":200
+            }
+        }
+    ],
+    "count":1
+}
