@@ -45,6 +45,18 @@ public class ReadJson {
         setFileObject(new JSONObject(resultStringBuilder.toString()));
     }
 
+    public JSONObject parse(String jsonString) {
+        JSONObject json;
+
+        try {
+            json = new JSONObject(jsonString);
+        } catch (Exception e) {
+            json = null;
+        }
+
+        return json;
+    }
+
     public static void main(String[] args) {
         ReadJson fichero = new ReadJson();
         fichero.setFileName("data.json");

@@ -59,4 +59,18 @@ public class ReadJsonTest
         Integer count = (Integer) json.get("count");
         assertEquals(count.intValue(), 0);
     }
+
+    @Test
+    public void shouldParseEmptyJsonOk() {
+        ReadJson read = new ReadJson();
+        String jsonString = "{}";
+        assertTrue(new JSONObject().similar(read.parse(jsonString)));
+    }
+
+    @Test
+    public void shouldParseOnpeElementJsonOk() {
+        ReadJson read = new ReadJson();
+        String jsonString = "{\"element1\":\"prueba\"}";
+        assertTrue(new JSONObject().put("element1", "prueba").similar(read.parse(jsonString)));
+    }
 }
