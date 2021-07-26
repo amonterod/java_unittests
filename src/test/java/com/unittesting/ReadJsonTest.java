@@ -23,7 +23,7 @@ public class ReadJsonTest
     }
 
     @Test
-    public void shouldReadFailed(){
+    public void whenReadFileThenFailed(){
         // Given
         boolean found = false;
         app.setFileName("unexistent.json");
@@ -40,7 +40,7 @@ public class ReadJsonTest
     }
 
     @Test
-    public void shouldReadEmpty(){
+    public void whenReadFileThenFileIsEmpty(){
         // Given
         app.setFileName("empty_data.json");
 
@@ -61,14 +61,14 @@ public class ReadJsonTest
     }
 
     @Test
-    public void shouldParseEmptyJsonOk() {
+    public void whenParseThenEmptyJson() {
         ReadJson read = new ReadJson();
         String jsonString = "{}";
         assertTrue(new JSONObject().similar(read.parse(jsonString)));
     }
 
     @Test
-    public void shouldParseOnpeElementJsonOk() {
+    public void whenParseThenOk() {
         ReadJson read = new ReadJson();
         String jsonString = "{\"element1\":\"prueba\"}";
         assertTrue(new JSONObject().put("element1", "prueba").similar(read.parse(jsonString)));

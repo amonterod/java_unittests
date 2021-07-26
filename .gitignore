@@ -90,3 +90,6 @@ target/test-classes/com/unittesting/ReadJsonTest.class
 .settings/org.eclipse.jdt.apt.core.prefs
 .settings/org.eclipse.jdt.core.prefs
 .settings/org.eclipse.m2e.core.prefs
+target/classes/com/unittesting/CreateJson.class
+target/my-reports/com.unittesting/CreateJson.html
+target/my-reports/com.unittesting/CreateJson.java.html

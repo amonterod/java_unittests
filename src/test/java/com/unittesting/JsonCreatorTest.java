@@ -29,7 +29,7 @@ public class JsonCreatorTest {
     }
 
     @Test
-    public void shouldEmptyJson() {
+    public void whenCreateJsonThenEmptyJson() {
         // Given
         JsonCreator json = new JsonCreator();
         String[] data = new String[]{};
@@ -44,7 +44,7 @@ public class JsonCreatorTest {
     }
 
     @Test
-    public void shouldHaveThreeElementsInJson() {
+    public void whenCreateJsonThenThreeElementsInJson() {
         // Given
         JsonCreator json = new JsonCreator();
         String[] data = new String[]{"element1", "value1", "element2", "value2", "element3", "value3"};
@@ -59,7 +59,7 @@ public class JsonCreatorTest {
     }
     
     @Test
-    public void shouldFail() {
+    public void whenCreateJsonThenFail() {
         // Given
         JsonCreator json = new JsonCreator();
         String[] data = new String[]{"element1"};
